@@ -16,7 +16,7 @@
 <body>
 
     <!-- code here -->
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary mb-3">
         <a class="navbar-brand" href="#">Makan Bang</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -34,8 +34,16 @@
         </div>
       </nav>
 
-    <div class="container"></div>
-    <div id="card-list"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-3">
+                <div id="category"></div>
+            </div>
+            <div class="col-sm-9 col-md-9">
+                <div id="card-list" class="row"></div>
+            </div>
+        </div>
+    </div>
 
         <script src="./assets/js/main.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

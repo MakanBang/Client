@@ -13,9 +13,23 @@ function geoCodeJakarta() {
     .done( function(result) {
         console.log(result)
         $("#card-list").html("")
-        $("#card-list").append(`
-            <h1>HI</h1>
-        `)
+        result.found.nearby_restaurants.forEach( e => {
+
+            $("#card-list").append(`
+                <div class="col-sm-4 col-md-4">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="${e.restaurant.thumb}" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">${e.restaurant.name}</h4>
+                        <p> Location: ${e.restaurant.location.address} </p>
+                        <p class="card-text"> <small> ${e.restaurant.user_rating.votes} <i class="fa fa-heart-o" aria-hidden="true"></i> - ${e.restaurant.user_rating.aggregate_rating} <i class="fa fa-star-o" aria-hidden="true"></i> </small></p>
+                        <a href="${e.restaurant.menu_url}" class="btn btn-primary">Check Menu</a>
+                    </div>
+                </div>
+                </div>
+            `)
+            
+        })
     })
     .fail( function(error) {
 
