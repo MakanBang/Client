@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 .carousel-inner img {
     object-fit: cover;
     height: 500px;
-<<<<<<< HEAD
 }
 
 .text-carousel{
@@ -56,10 +54,8 @@
     border-radius: 15px;
     margin-top: 15px;
     padding: 15px;
-=======
->>>>>>> f59234e1548cf8471117d0989315f62817d08e26
 }
-=======
+
 body{ 
     padding:0;
     margin:0;
@@ -76,11 +72,11 @@ body{
     width:100vw;
   }
   .inner-container{
-    width:400px;
-    height:400px;
+    width:750px;
+    height:600px;
     position:absolute;
     top:calc(50vh - 200px);
-    left:calc(50vw - 200px);
+    left:calc(50vw - 400px);
     overflow:hidden;
   }
   .bgvid.inner{
@@ -99,7 +95,6 @@ body{
     font-family:Helvetica;
     color:#fff;
     background:rgba(0,0,0,0.13);
-    padding:30px 0px;
   }
   .box h1{
     text-align:center;
@@ -119,7 +114,7 @@ body{
     outline:none;
   }
   .box button{
-    background:#2ecc71;
+    background:#006CFF;
     border:0;
     color:#fff;
     padding:10px;
@@ -140,4 +135,3 @@ body{
     cursor:pointer;
     color:#666;
   }
->>>>>>> wetaher search
