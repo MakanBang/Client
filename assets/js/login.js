@@ -26,7 +26,7 @@ function checkLoginState() {
 
         $.ajax({
             method: 'POST',
-            url: 'http://localhost:3000/users/loginFacebook',
+            url: 'https://makanbang.padangjs.com/users/loginFacebook',
             data: response.authResponse
         })
             .done(result => {
@@ -53,7 +53,7 @@ function register() {
 
     $.ajax({
         method: 'POST',
-        url: 'http://localhost:3000/users/signup',
+        url: 'https://makanbang.padangjs.com/users/signup',
         data: {
             name: $("#name").val(),
             email: $("#email").val(),
@@ -73,7 +73,7 @@ function register() {
 function login() {
     $.ajax({
         method: 'POST',
-        url: 'http://localhost:3000/users/signin',
+        url: 'https://makanbang.padangjs.com/users/signin',
         data: {
             email: $("#email1").val(),
             password: $("#password1").val()

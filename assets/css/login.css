@@ -1,23 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display");
-body, .message, .form, form {
+.message, .form, form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-body {
-  height: 100vh;
-  background: #E8E8E8;
-  font-family: "Source Sans Pro", sans-serif;
-  overflow: hidden;
-}
-
 .container {
-  width: 700px;
+  width: 100%;
   height: 400px;
-  background: white;
+  background: transparent;
   position: relative;
   display: grid;
   grid-template: 100% / 50% 50%;
@@ -26,7 +19,7 @@ body {
 
 .message {
   position: absolute;
-  background: white;
+  background: transparent;
   width: 50%;
   height: 100%;
   transition: 0.5s all ease;
@@ -58,6 +51,8 @@ body {
 }
 
 .btn-wrapper {
+  display: flex;
+  justify-content: center;
   width: 60%;
 }
 
@@ -66,31 +61,31 @@ body {
   height: 100%;
 }
 .form--heading {
-  font-size: 18px;
+  font-size: 25px;
   height: 50px;
-  color: blue;
+  color: white;
   font-family: 'Playfair Display', serif;
 }
 
 form {
-  width: 70%;
+  width: 100%;
 }
 form > * {
   margin: 10px;
 }
 form input {
-  width: 90%;
+  width: 100%;
   border: 0;
   /* border-bottom: 1px solid rgba(195, 195, 216, 0.5); */
   border-bottom: 1px solid rgba(7, 7, 236, 0.5);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 300;
-  color:blue;
+  color:white;
   letter-spacing: 0.11em;
 }
 form input::placeholder {
-  color:blue;
-  font-size: 10px;
+  color:white;
+  font-size: 15px;
 }
 form input:focus {
   outline: 0;
@@ -100,11 +95,11 @@ form input:focus {
 
 .button {
   width: 100%;
-  height: 30px;
+  height: 50px;
   border: 0;
   outline: 0;
   color: white;
-  font-size: 15px;
+  font-size: 9px;
   font-weight: 300;
   position: relative;
   z-index: 3;
