@@ -1,6 +1,7 @@
 .carousel-inner img {
     object-fit: cover;
     height: 500px;
+<<<<<<< HEAD
 }
 
 .text-carousel{
@@ -54,4 +55,6 @@
     border-radius: 15px;
     margin-top: 15px;
     padding: 15px;
+=======
+>>>>>>> f59234e1548cf8471117d0989315f62817d08e26
 }
