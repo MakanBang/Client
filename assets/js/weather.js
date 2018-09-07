@@ -1,6 +1,8 @@
+
+
 $.ajax({
     method: 'GET',
-    url: `http://localhost:3000/weather/jakarta`
+    url: `https://makanbang.padangjs.com/weather/jakarta`
 })
 .done(function (result) {
     let suhu = result.data.main.temp.toString()
@@ -27,7 +29,7 @@ function searchWeather() {
     let city = $("#search-weather").val();
     $.ajax({
         method: 'GET',
-        url: `http://localhost:3000/weather/${city}`
+        url: `https://makanbang.padangjs.com/weather/${city}`
     })
     .done(function (result) {
             $( ".cuaca" ).hide();
