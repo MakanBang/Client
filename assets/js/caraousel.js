@@ -1,4 +1,5 @@
-var localhost = "http://localhost:3000"
+
+var localhost = "https://makanbang.padangjs.com"
 
 $(document).ready(function(){
     carausel()
