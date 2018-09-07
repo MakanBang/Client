@@ -1,8 +1,9 @@
-const localhost = "http://localhost:3000"
+var localhost = "http://localhost:3000"
 
 $(document).ready(function(){
     carausel()
 })
+
 
 function carausel() {
     
@@ -27,13 +28,23 @@ function carausel() {
             if (i == 0) {
                 $(".carousel-inner").append(
                     `<div class="carousel-item active">
-                        <img class="d-block w-100" src="${response.data.meals[0].strMealThumb}"
+                        <img class="d-block w-100" src="${response.data.meals[0].strMealThumb}">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div style="padding : 5px; border-radius: 15px; background-color: rgba(255, 255, 255, 0.63); font-size:bold;"> 
+                                <h3 class="text-carousel">${response.data.meals[0].strMeal}</h3>
+                            </div>
+                        </div>
                     </div>`
                 )
             } else {
                 $(".carousel-inner").append(
                     `<div class="carousel-item">
-                        <img class="d-block w-100" src="${response.data.meals[0].strMealThumb}"
+                        <img class="d-block w-100" src="${response.data.meals[0].strMealThumb}">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div style="padding : 5px; border-radius: 15px; background-color: rgba(255, 255, 255, 0.63); font-size:bold;"> 
+                                <h3 class="text-carousel">${response.data.meals[0].strMeal}</h3>
+                            </div>
+                        </div>
                     </div>`
                 )
             }
