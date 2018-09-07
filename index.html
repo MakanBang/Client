@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./assets/css/weather.css">
 </head>
 
 <body>
@@ -52,7 +53,30 @@
         <div class="row">
             <div class="col-sm-3 col-md-3">
                 <div id="category"></div>
+                <div class="weather-api">
+                        <div class="weather-card one">
+                                <div class="top">
+                                    <div class="wrapper ">
+                                        <div class="detail-weather">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <div class="wrapper"><br>
+                                        <div class="search-weather">
+                                            <div class="input-group mb-3">
+                                                    <input type="text" class="form-control" id="search-weather" placeholder="City" aria-label="City" aria-describedby="basic-addon2">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-outline-secondary" onclick="searchWeather()" type="button">Search</button>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 <div class="widget_wrap" style="width:320px;height:797px;display:inline-block;"><iframe src="https://www.zomato.com/widgets/res_search_widget.php?city_id=74&theme=red&sort=popularity" style="position:relative;width:100%;height:100%;" border="0" frameborder="0"></iframe></div>
+               
             </div>
             <div class="col-sm-9 col-md-9">
                 <div id="card-list" class="row"></div>
@@ -68,6 +92,7 @@
             <script src="./assets/js/caraousel.js"></script>
             <script src="./assets/js/getRecipe.js"></script>
             <script src="./assets/js/zomato.js"></script>
+            <script src="./assets/js/weather.js"></script>
         </body>
 
 </html>
