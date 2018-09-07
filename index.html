@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MakanBang</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- <link href="/assets/css/style.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="./assets/css/weather.css">
+    <link rel="stylesheet" href="./assets/css/vid-login.css">
+    <link href="/assets/css/carousel.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- code here -->
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary mb-3">
+        <a class="navbar-brand" href="#">Makan Bang</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchResto">
+          </form>
+          <button class="btn btn-success my-2 my-sm-0" onclick="login()" id="login">Login</button>
+          <button class="btn btn-success my-2 my-sm-0" onclick="logout()" id="logout">Logout</button>
+        </div>
+      </nav>
+
+    <div class="container-fluid">
+        <div class="row mb-3">
+            <div class="col-sm-12">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+            
+                        </ol>
+                        <div class="carousel-inner">
+                    </div>
+                </div>    
+            </div>
+            <!-- <div class="col-sm-4"></div> -->
+        </div>
+
+        <div class="row ml-2 mr-2 mb-3">
+            <div class="recipe-list row col-sm-10"></div> 
+            <div class="recipe-search-box col-sm-2">
+                <div class="col">
+                    <h3>Search Recipe :</h3>
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button> -->
+                    <input type="text" id="searchRecipe">
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-3 col-md-3">
+                <div id="category"></div>
+                <div class="weather-api">
+                        <div class="weather-card one">
+                                <div class="top">
+                                    <div class="wrapper ">
+                                        <div class="detail-weather">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <div class="wrapper"><br>
+                                        <div class="search-weather">
+                                            <div class="input-group mb-3">
+                                                    <input type="text" class="form-control" id="search-weather" placeholder="City" aria-label="City" aria-describedby="basic-addon2">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-outline-secondary" onclick="searchWeather()" type="button">Search</button>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <div class="widget_wrap" style="width:100%;height:797px;display:inline-block;"><iframe src="https://www.zomato.com/widgets/res_search_widget.php?city_id=74&theme=red&sort=popularity" style="position:relative;width:100%;height:100%;" border="0" frameborder="0"></iframe></div>
+               
+            </div>
+            <div class="col-sm-9 col-md-9">
+                <div id="card-list" class="row"></div>
+            </div>
+        </div>
+    </div>
+
+            
+
+    <!-- modal -->
+    <div class="modal-recipe">
+
+    </div>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content-recipe modal-content">
+                
+            </div>
+        </div>
+    </div>
+
+
+            <script src="./assets/js/main.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+            <!-- script here -->
+            <script src="./assets/js/searchRecipe.js"></script>
+            <script src="./assets/js/caraousel.js"></script>
+            <script src="./assets/js/getRecipe.js"></script>
+            <script src="./assets/js/google.js"></script>
+            <script src="./assets/js/zomato.js"></script>
+            <script src="./assets/js/weather.js"></script>
+            <script src="https://apis.google.com/js/platform.js" async defer></script>
+        </body>
+
+
+        
+</html>
