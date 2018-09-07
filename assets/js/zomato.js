@@ -1,4 +1,4 @@
-let base_url = 'http://localhost:3000'
+let base_url = 'https://makanbang.padangjs.com'
 
 $( document ).ready(function() {
     geoCodeJakarta()
@@ -16,7 +16,6 @@ function geoCodeJakarta() {
     .done( function(result) {
         $("#card-list").html("")
         result.found.nearby_restaurants.forEach( e => {
-
             $("#card-list").append(`
                 <div class="col-sm-4 col-md-4">
                 <div class="card mb-3">
@@ -26,9 +25,17 @@ function geoCodeJakarta() {
                         <p> Location: ${e.restaurant.location.address} </p>
                         <p class="card-text"> <small> ${e.restaurant.user_rating.votes} <i class="fa fa-heart-o" aria-hidden="true"></i> - ${e.restaurant.user_rating.aggregate_rating} <i class="fa fa-star-o" aria-hidden="true"></i> </small></p>
                         <a href="${e.restaurant.menu_url}" class="btn btn-primary">Check Menu</a>
+                        <a class="button-google" href="https://plus.google.com/share?text=${e.restaurant.name}%0A${e.restaurant.location.address}&url=${e.restaurant.thumb}" onclick="javascript:window.open(this.href,
+                        '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
+                           src="https://www.gstatic.com/images/icons/gplus-32.png" alt="Share on Google+"/></a>
                     </div>
                 </div>
                 </div>
+                <script>
+                if(!token){
+                    $('.button-google').hide()
+                }
+                </script>
             `)
             
         })
@@ -37,6 +44,8 @@ function geoCodeJakarta() {
 
     })
 }
+
+
 
 function getCategory() {
     $.ajax({
